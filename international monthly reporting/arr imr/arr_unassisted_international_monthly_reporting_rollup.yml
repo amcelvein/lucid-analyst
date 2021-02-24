@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: arr_unassisted_international_monthly_reporting_rollup
+    description: International monthly reporting rollup for unassisted arr metrics with aggregates.
+    columns:
+      - name: month
+        description: The calendar month of this record.
+
+      - name: lucid_division
+        description: Chart, Press, Lucidspark, or Lucid for Education.
+
+      - name: forecasting_sub_region
+        description: The account's sub-region for financial forecasting purposes (subset of geo_region).
+
+      - name: geo_region
+        description: The account's geographic region.
+
+      - name: churn_downgrade_month_actual_arr
+        description: Month actual ARR from churn or downgrade accounts, for a given month.
+
+      - name: prev_year_churn_downgrade_month_actual_arr
+        description: Month actual ARR from churn or downgrade accounts, from the previous year of a given month.
+
+      - name: prev_month_churn_downgrade_month_actual_arr
+        description: Month actual ARR from churn or downgrade accounts, from the previous month of a given month.
+
+      - name: churn_downgrade_reforecast_arr
+        description: Reforecast ARR from churn or downgrade accounts, for a given month.
+
+      - name: prev_year_churn_downgrade_reforecast_arr
+        description: Reforecast ARR from churn or downgrade accounts, from the previous year of a given month.
+
+      - name: prev_month_churn_downgrade_reforecast_arr
+        description: Reforecast ARR from churn or downgrade accounts, from the previous month of a given month.
+
+      - name: new_upgrade_month_actual_arr
+        description: Month actual ARR from new or upgrade accounts, for a given month.
+
+      - name: prev_year_new_upgrade_month_actual_arr
+        description: Month actual ARR from new or upgrade accounts, from the previous year of a given month.
+
+      - name: prev_month_new_upgrade_month_actual_arr
+        description: Month actual ARR from new or upgrade accounts, from the previous month of a given month.
+
+      - name: new_upgrade_reforecast_arr
+        description: Reforecast ARR from new or upgrade accounts, for a given month.
+
+      - name: prev_year_new_upgrade_reforecast_arr
+        description: Reforecast ARR from new or upgrade accounts, from the previous year of a given month.
+
+      - name: prev_month_new_upgrade_reforecast_arr
+        description: Reforecast ARR from new or upgrade accounts, from the previous month of a given month.
+
+      - name: total_month_actual_arr
+        description: Month actual ARR from all accounts, for a given month.
+
+      - name: prev_year_total_month_actual_arr
+        description: Month actual ARR from all accounts, from the previous year of a given month.
+
+      - name: prev_month_total_month_actual_arr
+        description: Month actual ARR from all accounts, from the previous month of a given month.
+
+      - name: total_reforecast_arr
+        description: Reforecast ARR from all accounts, for a given month.
+
+      - name: prev_year_total_reforecast_arr
+        description: Reforecast ARR from all accounts, from the previous year of a given month.
+
+      - name: prev_month_total_reforecast_arr
+        description: Reforecast ARR from all accounts, from the previous month of a given month.

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: funnel_unassisted_international_monthly_reporting_rollup
+    description: International monthly reporting rollup for unassisted funnel metrics with aggregates.
+    columns:
+      - name: month
+        description: The calendar month of this record.
+
+      - name: forecasting_sub_region
+        description: The account's geographic sub-region for financial forecasting purposes (subset of geo_region).
+
+      - name: geo_region
+        description: The account's geographic region.
+
+      - name: product
+        description: Chart, Press, or Lucidspark (sometimes comes from lucid_division but joins exclude other products).
+
+      - name: metric
+        description: Quantitative aggregation of a metric, each CTE contains a distinct metric.
+
+      - name: metric_name
+        description: Name of metric that is being aggregated, each CTE contains a distinct metric.

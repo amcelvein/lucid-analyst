@@ -1,0 +1,352 @@
+      version: 2
+
+sources:
+  - name: external_sources
+    database: sor_db
+    schema: external_sources
+
+    freshness:
+      warn_after: {count: 7, period: hour}
+
+-- base arr forecasting
+
+      - name: forecast_fy2022_base_chart_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_base_press_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_base_lucidspark_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+-- stretch arr forecasting
+
+      - name: forecast_fy2022_stretch_chart_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_stretch_press_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_stretch_lucidspark_arr_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, day_change_type, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: day_change_type
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+--base registration forecasting
+
+    tables:
+      - name: forecast_fy2022_base_chart_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_base_press_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_base_lucidspark_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+--stretch registration forecasting
+
+      - name: forecast_fy2022_stretch_chart_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_stretch_press_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_stretch_lucidspark_registration_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, marketing_channel, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: marketing_channel
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+--base subscriptions forecasting
+
+- name: forecast_fy2022_base_chart_subs_by_sku_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, metric, day_attributed_sales_group, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: metric
+              tests:
+                - not_null
+            - name: day_attributed_sales_group
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_base_lucidspark_subs_by_sku_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, metric, day_attributed_sales_group, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: metric
+              tests:
+                - not_null
+            - name: day_attributed_sales_group
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+--stretch subscriptions forecasting
+
+      - name: forecast_fy2022_stretch_chart_subs_by_sku_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, metric, day_attributed_sales_group, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: metric
+              tests:
+                - not_null
+            - name: day_attributed_sales_group
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
+
+      - name: forecast_fy2022_stretch_lucidspark_subs_by_sku_calendarization
+        tests:
+          - unique:
+              column_name: "concat(day, product, day_attributed_level_group, metric, day_attributed_sales_group, forecasting_sub_region)"
+        columns:
+            - name: day
+              tests:
+                - not_null
+            - name: product
+              tests:
+                - not_null
+            - name: day_attributed_level_group
+              tests:
+                - not_null
+            - name: metric
+              tests:
+                - not_null
+            - name: day_attributed_sales_group
+              tests:
+                - not_null
+            - name: forecasting_sub_region
+              tests:
+                - not_null
